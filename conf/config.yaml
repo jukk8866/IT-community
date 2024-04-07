@@ -1,0 +1,31 @@
+name: "bluebell"
+mode: "dev"
+port: 80
+version: "v0.0.1"
+start_time: "2024-3-13"
+machine_id: 1
+
+auth:
+  jwt_expire: 876000
+
+log:
+  leverl: "debug"
+  filename: "web_app.log"
+  #最大存储大小 存储时间 备份数量
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+mysql:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: "123456"
+  dbname: "bluebell"
+  max_open_conns: 200
+  max_idle_conns: 50
+redis:
+  host: "127.0.0.1"
+  password: ""
+  port: 6379
+  db: 0
+  pool_size: 100
